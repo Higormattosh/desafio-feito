@@ -54,7 +54,7 @@ app.put("/repositories/:id", (request, response) => {
  repositories[findRepositoryId] = repository
 
 
-  return response.json(repository)
+  return response.json(repository);
 
    });
 
@@ -84,7 +84,7 @@ app.delete("/repositories/:id", (request, response) => {
 });
 
 app.post("/repositories/:id/like", (request, response) => {
-  const {id} = request.params 
+  const {id} = request.params       
 
   const findRepositoryId = repositories.findIndex(item => item && item.id === id);
 
